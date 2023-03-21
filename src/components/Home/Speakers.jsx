@@ -20,19 +20,20 @@ export default function Speakers() {
         <div className="speakers-card__container">
           {speakers.map((s, index) => (
             <div
-              className="speakers-card"
               key={index}
               data-aos="fade-up"
               data-aos-delay={`${200 * index}`}
             >
-              <Image
-                className="speakers-card__img"
-                src={ProfileImage}
-                alt="Speaker Image"
-              />
-              <div className="speakers-card__body">
-                <h4 className="speakers-card__title">John Doe</h4>
-                <h6 className="speakers-card__subtitle">John Doe</h6>
+              <div className="speakers-card">
+                <Image
+                  className="speakers-card__img"
+                  src={ProfileImage}
+                  alt="Speaker Image"
+                />
+                <div className="speakers-card__body">
+                  <h4 className="speakers-card__title">John Doe</h4>
+                  <h6 className="speakers-card__subtitle">John Doe</h6>
+                </div>
               </div>
             </div>
           ))}
