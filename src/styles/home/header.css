@@ -24,7 +24,7 @@
   }
 
   .nav__menu {
-    @apply flex flex-col h-full p-4 text-4xl border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0;
+    @apply flex flex-col h-full p-4 text-4xl border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:text-base md:border-0;
   }
 
   .nav__close-btn-item {
@@ -36,6 +36,6 @@
   }
 
   .nav__link {
-    @apply block pl-3 pr-4 duration-200 rounded-lg btn md:bg-transparent hover:bg-primary hover:text-white md:btn md:text-lg;
+    @apply block pl-3 pr-4 duration-200 rounded-lg btn md:bg-transparent hover:bg-primary hover:text-white md:font-normal;
   }
 }
