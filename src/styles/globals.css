@@ -21,8 +21,8 @@
   }
 
   .btn-register {
-    @apply gap-2 border-2 shadow-xl bg-white/20 border-primary btn text-primary w-fit;
-    @apply duration-200 shadow-inner hover:shadow-primary hover:bg-white/50;
+    @apply gap-2 border-2 shadow-xl bg-white/60 border-primary btn text-primary w-fit;
+    @apply duration-200 hover:shadow-inner hover:bg-white/80;
     @apply md:text-xl;
   }
 

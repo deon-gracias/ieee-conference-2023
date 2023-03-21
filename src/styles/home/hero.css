@@ -6,7 +6,7 @@
   }
 
   .hero__img {
-    @apply mx-auto opacity-50;
+    @apply mx-auto opacity-60;
     @apply xl:my-auto xl:h-full xl:w-auto xl:absolute xl:right-0 xl:top-0 xl:-z-10;
   }
 
@@ -17,7 +17,7 @@
   }
 
   .hero__title {
-    @apply px-3 py-1 text-4xl font-bold text-white uppercase rounded-md bg-primary w-fit;
+    @apply px-3 py-1 text-4xl font-bold text-white uppercase rounded-md shadow-xl bg-primary w-fit;
     @apply md:text-7xl;
     @apply xl:text-8xl;
   }

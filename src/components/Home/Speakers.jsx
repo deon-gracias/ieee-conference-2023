@@ -13,11 +13,18 @@ export default function Speakers() {
   return (
     <section className="section" id="speakers">
       <div className="section__container">
-        <h1 className="section__title">Speakers</h1>
+        <h1 className="section__title" data-aos="fade-down">
+          Speakers
+        </h1>
 
         <div className="speakers-card__container">
           {speakers.map((s, index) => (
-            <div className="speakers-card" key={index}>
+            <div
+              className="speakers-card"
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={`${200 * index}`}
+            >
               <Image
                 className="speakers-card__img"
                 src={ProfileImage}

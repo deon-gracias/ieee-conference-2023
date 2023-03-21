@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Hero from "@/components/Home/Hero"
-import About from "@/components/Home/About"
-import PoweredBy from "@/components/Home/PoweredBy"
-import Explore from "@/components/Home/Explore"
-import Speakers from "@/components/Home/Speakers"
+import { useEffect } from "react";
+import Hero from "@/components/Home/Hero";
+import About from "@/components/Home/About";
+import PoweredBy from "@/components/Home/PoweredBy";
+import Explore from "@/components/Home/Explore";
+import Speakers from "@/components/Home/Speakers";
 import HomeLayout from "@/components/Home/HomeLayout";
 
 export default function Home() {
