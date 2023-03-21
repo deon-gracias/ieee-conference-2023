@@ -1,21 +1,23 @@
+import Link from "next/link";
+
 export default function Footer() {
   const footerSections = [
     {
       title: "Contact",
       content: [
-        { link: "about", title: "About" },
-        { link: "gallery", title: "Gallery" },
-        { link: "member", title: "Become a member" },
-        { link: "conference", title: "Conferences" },
+        { link: "/#about", title: "About" },
+        { link: "/#gallery", title: "Gallery" },
+        { link: "/#member", title: "Become a member" },
+        { link: "/#conference", title: "Conferences" },
       ],
     },
     {
       title: "Useful Links",
       content: [
-        { link: "about", title: "About" },
-        { link: "gallery", title: "Gallery" },
-        { link: "member", title: "Become a member" },
-        { link: "conference", title: "Conferences" },
+        { link: "/#about", title: "About" },
+        { link: "/#gallery", title: "Gallery" },
+        { link: "/#member", title: "Become a member" },
+        { link: "/#conference", title: "Conferences" },
       ],
     },
   ];
@@ -29,7 +31,13 @@ export default function Footer() {
             <ul className="footer__section-list">
               {section.content.map((link, index) => (
                 <li className="footer__section-item" key={index}>
-                  <a className="footer__section-link" href={link.link}>{link.title}</a>
+                  <Link
+                    scroll={false}
+                    className="footer__section-link"
+                    href={link.link}
+                  >
+                    {link.title}
+                  </Link>
                 </li>
               ))}
             </ul>
