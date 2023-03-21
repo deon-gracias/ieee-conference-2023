@@ -8,6 +8,7 @@ export default function Header() {
   const navItems = [
     { title: "About", href: "/#about" },
     { title: "Speakers", href: "/#speakers" },
+    { title: "Schedule", href: "/schedule" },
     { title: "Explore", href: "/#explore" },
   ];
 
@@ -46,12 +47,9 @@ export default function Header() {
               </li>
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <a
-                    href={item.href}
-                    className="nav__link"
-                  >
+                  <Link href={item.href} scroll={false} className="nav__link">
                     {item.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
