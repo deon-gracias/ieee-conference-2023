@@ -22,9 +22,7 @@ export default function Hero() {
         <RegisterButton />
       </div>
 
-      <div data-aos="zoom-in">
-        <Image className="hero__img" src={HeroImage} alt="Hero Image" />
-      </div>
+      <Image className="hero__img" src={HeroImage} alt="Hero Image" />
     </section>
   );
 }
