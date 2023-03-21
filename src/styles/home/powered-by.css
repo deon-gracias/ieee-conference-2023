@@ -1,7 +1,7 @@
 @layer components {
   .powered-by {
     @apply flex flex-col items-center w-full gap-2 py-8 text-white bg-primary;
-    @apply md:py-10 md:space-y-5;
+    @apply md:py-10 md:space-y-5 md:py-16;
   }
 
   .powered-by__title {
