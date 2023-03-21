@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }) {
       offset: 100,
       duration: 600,
       easing: "ease-in-out-sine",
+      once: true,
     });
   }, []);
 
