@@ -2,9 +2,9 @@ import { IconCircleChevronRight } from "@tabler/icons-react";
 
 export default function Explore() {
   const exploreList = [
-    { title: "Schedule", href: "#" },
+    { title: "Schedule", href: "/schedule" },
     { title: "Speakers", href: "#" },
-    { title: "FAQ", href: "#" },
+    { title: "FAQ", href: "/faq" },
     { title: "2019 Conference", href: "#" },
   ];
 
