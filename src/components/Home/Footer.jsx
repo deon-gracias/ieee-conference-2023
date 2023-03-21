@@ -1,9 +1,41 @@
+import { IconMail, IconPhone } from "@tabler/icons-react";
 import Link from "next/link";
 
 export default function Footer() {
   const footerSections = [
     {
       title: "Contact",
+      content: [
+        {
+          link: "tel:00000",
+          title: (
+            <div className="flex items-center gap-2">
+              <IconPhone /> 000000
+            </div>
+          ),
+        },
+        {
+          link: "mailto:example@mail.com",
+          title: (
+            <div className="flex items-center gap-2">
+              <IconMail />
+              example@mail.com
+            </div>
+          ),
+        },
+      ],
+    },
+    {
+      title: "Useful Links",
+      content: [
+        { link: "/#about", title: "About" },
+        { link: "/#gallery", title: "Gallery" },
+        { link: "/#member", title: "Become a member" },
+        { link: "/#conference", title: "Conferences" },
+      ],
+    },
+    {
+      title: "Useful Links",
       content: [
         { link: "/#about", title: "About" },
         { link: "/#gallery", title: "Gallery" },
