@@ -55,7 +55,7 @@ export default function FAQ() {
           <div>
             <label
               for="search"
-              class="block mb-1 text-sm font-medium text-lg text-gray-900"
+              className="block mb-1 text-sm text-lg font-medium text-gray-900"
             >
               Search
             </label>
@@ -66,7 +66,7 @@ export default function FAQ() {
               onChange={(e) => {
                 setSearch(e.currentTarget.value);
               }}
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-primaryfocus:border-primary block w-full p-2.5"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-primaryfocus:border-primary block w-full p-2.5"
               placeholder="John"
               required
             />
