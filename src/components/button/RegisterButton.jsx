@@ -6,11 +6,11 @@ export default function RegisterButton({
   dataAos = "fade-up",
 }) {
   return (
-    <React.Fragment data-aos="fade-up">
+    <div data-aos="fade-up">
       <button className={`btn-register ${className}`}>
         Register Now
         <IconExternalLink />
       </button>
-    </React.Fragment>
+    </div>
   );
 }
