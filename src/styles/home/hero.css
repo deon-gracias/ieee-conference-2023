@@ -1,0 +1,36 @@
+@layer utilities {
+  /* === Hero === */
+  .hero {
+    @apply relative py-16;
+    @apply md:mx-auto md:container;
+  }
+
+  .hero__img {
+    @apply mx-auto opacity-50;
+    @apply xl:my-auto xl:h-full xl:w-auto xl:absolute xl:right-0 xl:top-0 xl:-z-10;
+  }
+
+  .hero__container {
+    @apply absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-full h-full px-4 space-y-4;
+    @apply md:space-y-6 md:py-16;
+    @apply xl:items-start lg:py-32 xl:text-left xl:static;
+  }
+
+  .hero__title {
+    @apply px-3 py-1 text-4xl font-bold text-white uppercase rounded-md bg-primary w-fit;
+    @apply md:text-7xl;
+    @apply xl:text-8xl;
+  }
+
+  .hero__subtitle {
+    @apply text-lg font-medium;
+    @apply md:text-2xl;
+    @apply xl:text-3xl;
+  }
+
+  .hero__date {
+    @apply md:text-xl;
+    @apply lg:text-lg;
+    @apply xl:text-xl;
+  }
+}

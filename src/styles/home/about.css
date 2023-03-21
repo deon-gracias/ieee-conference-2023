@@ -1,0 +1,21 @@
+@layer components {
+  .about__container {
+    @apply lg:grid lg:grid-cols-2 lg:gap-x-8;
+  }
+
+  .about__title {
+    @apply lg:col-span-full;
+  }
+
+  .about__content {
+    @apply space-y-5;
+    @apply md:text-xl;
+    @apply lg:flex lg:flex-col lg:justify-center lg:space-y-8;
+  }
+
+  .about__img {
+    @apply overflow-hidden rounded-xl h-[225px] object-cover;
+    @apply md:h-[400px];
+    @apply lg:order-1 lg:h-auto;
+  }
+}

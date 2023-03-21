@@ -1,0 +1,34 @@
+@layer components {
+  .speakers-card__container {
+    @apply grid grid-cols-2 gap-4;
+    @apply lg:grid-cols-4;
+  }
+
+  .speakers-card {
+    @apply flex flex-col items-center px-8 py-6 rounded-lg shadow-md space-y-7;
+    @apply duration-300 hover:shadow-xl hover:scale-105;
+    @apply md:py-10 md:rounded-3xl;
+  }
+
+  .speakers-card__img-container {
+    @apply w-full overflow-hidden rounded-full;
+  }
+
+  .speakers-card__img {
+    @apply object-cover rounded-full aspect-square max-h-[200px] w-auto;
+  }
+
+  .speakers-card__body {
+    @apply flex flex-col items-center space-y-2;
+  }
+
+  .speakers-card__title {
+    @apply text-2xl font-bold;
+    @apply md:text-3xl;
+  }
+
+  .speakers-card__subtitle {
+    @apply text-lg;
+    @apply md:text-xl;
+  }
+}

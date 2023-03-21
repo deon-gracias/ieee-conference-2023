@@ -1,0 +1,14 @@
+@layer components {
+  .explore__list {
+    @apply overflow-hidden text-lg divide-y-2 divide-black rounded-xl;
+    @apply md:text-2xl;
+  }
+
+  .explore__item {
+  }
+
+  .explore__link {
+    @apply flex items-center justify-between w-full px-4 py-4 pr-8 space-y-2 font-bold uppercase;
+    @apply duration-300 hover:text-white hover:bg-primary hover:pr-4;
+  }
+}
