@@ -3,12 +3,12 @@ import Header from "./Header";
 
 export default function HomeLayout({ children }) {
   return (
-    <div>
+    <>
       <Header />
 
-      <main>{children}</main>
+      <main className="w-screen">{children}</main>
 
       <Footer />
-    </div>
+    </>
   );
 }
