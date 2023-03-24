@@ -14,7 +14,7 @@ export default function About() {
           alt="About Image"
           src={AboutImage}
           className="about__img"
-          data-aos="fade-left"
+          data-aos="fade-up"
         />
 
         <div className="about__content" data-aos="fade-right">
