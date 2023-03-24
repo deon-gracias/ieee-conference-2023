@@ -8,7 +8,7 @@ export default function Header() {
   const navItems = [
     { title: "About", href: "/#about" },
     { title: "Speakers", href: "/#speakers" },
-    { title: "Schedule", href: "/schedule" },
+    { title: "Schedule", href: "/schedule#schedule" },
     { title: "Explore", href: "/#explore" },
   ];
 
@@ -33,7 +33,7 @@ export default function Header() {
             <IconMenu2 />
           </button>
           <div
-            className={`${visible ? "block" : "hidden"} nav__menu-container`}
+            className={`${visible && "show-nav"} nav__menu-container`}
             id="navbar-default"
           >
             <ul className="nav__menu">
@@ -47,7 +47,12 @@ export default function Header() {
               </li>
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <Link href={item.href} scroll={false} className="nav__link">
+                  <Link
+                    onClick={() => setVisible(false)}
+                    href={item.href}
+                    scroll={false}
+                    className="nav__link"
+                  >
                     {item.title}
                   </Link>
                 </li>
