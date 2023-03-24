@@ -17,7 +17,7 @@ export default function Explore() {
 
         <ul className="explore__list">
           {exploreList.map((e, index) => (
-            <li key={index} className="explore__item" data-aos="fade-right" data-aos-delay={`${200 * index}`}>
+            <li key={index} className="explore__item" data-aos="fade-right" data-aos-delay={`${100 * index}`}>
               <a className="explore__link" href={e.href}>
                 {e.title} <IconCircleChevronRight />
               </a>
