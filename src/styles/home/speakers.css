@@ -15,7 +15,7 @@
   }
 
   .speakers-card__img {
-    @apply object-cover rounded-full aspect-square max-h-[200px];
+    @apply object-cover rounded-full aspect-square w-auto max-h-[200px];
   }
 
   .speakers-card__body {
