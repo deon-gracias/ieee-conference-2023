@@ -6,7 +6,7 @@ export default function HomeLayout({ children }) {
     <>
       <Header />
 
-      <main className="w-screen">{children}</main>
+      <main>{children}</main>
 
       <Footer />
     </>
