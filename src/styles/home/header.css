@@ -18,9 +18,8 @@
   .nav__btn {
     @apply inline-flex items-center p-2 ml-3 text-sm duration-200 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 hover:bg-gray-200;
   }
-
   .nav__menu-container {
-    @apply fixed top-0 left-0 z-50 w-screen h-screen duration-300 translate-x-full bg-white md:block md:w-auto md:h-full md:static;
+    @apply fixed top-0 left-0 z-50 w-screen h-screen duration-300 translate-x-full bg-white md:translate-x-0 md:block md:w-auto md:h-full md:static;
   }
 
   .nav__menu-container.show-nav {
