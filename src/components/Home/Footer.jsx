@@ -61,8 +61,11 @@ export default function Footer() {
           <div className="footer__section" key={section.title}>
             <h3 className="footer__section-title">{section.title}</h3>
             <ul className="footer__section-list">
-              {section.content.map((link, index) => (
-                <li className="footer__section-item" key={index}>
+              {section.content.map((link, linkIndex) => (
+                <li
+                  className="footer__section-item"
+                  key={`${index}-${linkIndex}`}
+                >
                   <Link
                     scroll={false}
                     className="footer__section-link"
