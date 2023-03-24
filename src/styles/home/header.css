@@ -20,11 +20,15 @@
   }
 
   .nav__menu-container {
-    @apply fixed top-0 left-0 z-50 w-screen h-screen bg-white md:block md:w-auto md:h-full md:static;
+    @apply fixed top-0 left-0 z-50 w-screen h-screen duration-300 translate-x-full bg-white md:block md:w-auto md:h-full md:static;
+  }
+
+  .nav__menu-container.show-nav {
+    @apply translate-x-0;
   }
 
   .nav__menu {
-    @apply flex flex-col h-full p-4 text-4xl border border-gray-100 rounded-lg md:flex-row md:space-x-2 md:mt-0 md:text-base md:border-0;
+    @apply flex flex-col items-end h-full px-10 py-6 space-y-5 text-4xl border border-gray-100 rounded-lg md:space-y-0 md:flex-row md:space-x-2 md:mt-0 md:text-base md:border-0;
   }
 
   .nav__close-btn-item {
