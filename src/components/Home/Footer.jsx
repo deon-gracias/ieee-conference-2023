@@ -58,7 +58,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__container">
         {footerSections.map((section, index) => (
-          <div className="footer__section" key={section.title}>
+          <div className="footer__section" key={index}>
             <h3 className="footer__section-title">{section.title}</h3>
             <ul className="footer__section-list">
               {section.content.map((link, linkIndex) => (
