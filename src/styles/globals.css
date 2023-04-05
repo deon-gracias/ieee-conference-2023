@@ -21,6 +21,14 @@
     @apply flex items-center px-3 py-2 font-bold rounded-xl;
   }
 
+  .btn-primary {
+    @apply text-white bg-primary;
+  }
+
+  .btn-error {
+    @apply text-white bg-red-500;
+  }
+
   .btn-register {
     @apply gap-2 border-2 shadow-md bg-white/40 border-primary btn text-primary w-fit backdrop-blur-2xl;
     @apply duration-200 hover:bg-white/80 hover:shadow-xl;
@@ -35,5 +43,17 @@
   .section__container {
     @apply px-4 py-20 space-y-5;
     @apply md:space-y-8 md:container md:mx-auto;
+  }
+
+  .form-control {
+    @apply grid gap-1;
+  }
+
+  .form-control .input {
+    @apply border-[1px] rounded-lg px-3 py-2;
+  }
+
+  .form-control .btn {
+    @apply justify-center;
   }
 }
