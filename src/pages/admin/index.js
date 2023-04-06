@@ -38,14 +38,14 @@ export default function Dashboard() {
             <div className="flex">
               <button
                 onClick={addSpeaker}
-                className="btn border-2 w-fit gap-2 btn-primary"
+                className="gap-2 border-2 btn w-fit btn-primary"
               >
                 <IconCirclePlus />
                 Add Speaker
               </button>
               <button
                 onClick={removeSpeaker}
-                className="btn border-2 w-fit gap-2 btn-error"
+                className="gap-2 border-2 btn w-fit btn-error"
               >
                 <IconCircleMinus />
                 Remove Speaker
@@ -53,11 +53,11 @@ export default function Dashboard() {
             </div>
             {Array.from({ length: speakersCount }).map((_, i) => (
               <div
-                className="flex shadow-sm p-4 rounded-lg md:flex-row flex-col gap-4"
+                className="flex flex-col gap-4 p-4 rounded-lg shadow-sm md:flex-row"
                 key={i}
               >
                 {/* Inputs */}
-                <div className="grid md:grid-cols-2 w-full gap-4">
+                <div className="grid w-full gap-4 md:grid-cols-2">
                   <div className="form-control">
                     <label className="label">Title</label>
                     <input
@@ -109,7 +109,6 @@ function ScheduleForm() {
     const duplicate = [...scheduleCount];
     duplicate[index] -= 1;
     setScheduleCount(duplicate);
-    console.log(scheduleCount);
   }
 
   useEffect(() => {}, [scheduleCount]);
@@ -121,24 +120,24 @@ function ScheduleForm() {
         <div className="flex">
           <button
             onClick={addScheduleSection}
-            className="btn border-2 w-fit gap-2 btn-primary"
+            className="gap-2 border-2 btn w-fit btn-primary"
           >
             <IconCirclePlus />
             Add Schedule
           </button>
           <button
             onClick={removeScheduleSection}
-            className="btn border-2 w-fit gap-2 btn-error"
+            className="gap-2 border-2 btn w-fit btn-error"
           >
             <IconCircleMinus />
             Remove Schedule
           </button>
         </div>
         {Array.from({ length: scheduleCount.length }).map((_, i) => (
-          <div className="flex shadow-md p-4 rounded-lg flex-col gap-4" key={i}>
-            <div className="flex w-full gap-4 items-end">
+          <div className="flex flex-col gap-4 p-4 rounded-lg shadow-md" key={i}>
+            <div className="flex items-end w-full gap-4">
               {/* Section */}
-              <div className="form-control w-full">
+              <div className="w-full form-control">
                 <label className="label">Section Title</label>
                 <input
                   type="text"
@@ -146,7 +145,7 @@ function ScheduleForm() {
                   {...register(`schedule-${i + 1}-section-title`)}
                 />
               </div>
-              <div className="form-control w-full">
+              <div className="w-full form-control">
                 <label className="label">Section Subtitle</label>
                 <input
                   type="text"
@@ -169,7 +168,7 @@ function ScheduleForm() {
             <div className="grid gap-4">
               {Array.from({ length: scheduleCount[i] }).map((_, i) => (
                 <div className="flex gap-4" key={`${i}-${i}`}>
-                  <div className="grid shadow-md rounded-lg p-4 gap-3 md:grid-cols-3 w-full">
+                  <div className="grid w-full gap-3 p-4 rounded-lg shadow-md md:grid-cols-3">
                     <div className="form-control">
                       <label className="label">Title</label>
                       <input
