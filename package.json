@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pb-win": "./pocketbase/win.exe serve",
+    "pb-linux": "./pocketbase/linux serve"
   },
   "dependencies": {
     "@tabler/icons-react": "^2.11.0",
