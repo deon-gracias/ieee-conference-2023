@@ -33,4 +33,4 @@ Admin Panel should be visible on http://127.0.0.1:8090/_/
 
 Credentials are
 - Username: deongracias1@gmail.com
-- Password: 1234567890
+- Password: deongracias123
