@@ -1,6 +1,3 @@
-import { IconUser } from "@tabler/icons-react";
-import ProfileImage from "@/assets/images/profile.jpg";
-import Image from "next/image";
 import { getFileURL } from "@/lib/pocketbase";
 import Link from "next/link";
 import { useHomeStore } from "@/store/homeStore";
@@ -35,7 +32,7 @@ export default function Speakers() {
                 <img
                   loading="lazy"
                   className="speakers-card__img"
-                  src={getFileURL(s.collectionName, s.id, s.image) || ""}
+                  src={getFileURL(s.collectionName, s.id, s.image)}
                   alt="Speaker Image"
                 />
                 <div className="speakers-card__body">
