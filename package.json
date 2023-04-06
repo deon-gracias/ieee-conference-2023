@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.2.4",
     "@tabler/icons-react": "^2.11.0",
+    "@tailwindcss/typography": "^0.5.9",
     "aos": "^3.0.0-beta.6",
     "autoprefixer": "^10.4.14",
     "daisyui": "^2.51.4",
@@ -21,7 +21,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
-    "tailwind": "^4.0.0"
+    "zustand": "^4.3.7"
   },
   "devDependencies": {
     "postcss-import": "^15.1.0",
