@@ -1,12 +1,16 @@
+import { useHomeStore } from "@/store/homeStore";
 import { IconCircleChevronRight } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function Explore() {
-  const exploreList = [
-    { title: "Schedule", href: "/schedule" },
-    { title: "Speakers", href: "#" },
-    { title: "FAQ", href: "/faq" },
-    { title: "2019 Conference", href: "#" },
-  ];
+  // const explore = [
+  //   { name: "Schedule", link: "/schedule" },
+  //   { name: "Speakers", link: "#" },
+  //   { name: "FAQ", link: "/faq" },
+  //   { name: "2019 Conference", link: "#" },
+  // ];
+
+  const { explore } = useHomeStore();
 
   return (
     <section className="section" id="explore">
@@ -16,11 +20,16 @@ export default function Explore() {
         </h1>
 
         <ul className="explore__list">
-          {exploreList.map((e, index) => (
-            <li key={index} className="explore__item" data-aos="fade-right" data-aos-delay={`${100 * index}`}>
-              <a className="explore__link" href={e.href}>
-                {e.title} <IconCircleChevronRight />
-              </a>
+          {explore.map((e, index) => (
+            <li
+              key={index}
+              className="explore__item"
+              data-aos="fade-right"
+              data-aos-delay={`${100 * index}`}
+            >
+              <Link className="explore__link" href={e.link}>
+                {e.name} <IconCircleChevronRight />
+              </Link>
             </li>
           ))}
         </ul>
