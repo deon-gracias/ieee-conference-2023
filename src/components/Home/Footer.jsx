@@ -1,10 +1,4 @@
-import { useHomeStore } from "@/store/homeStore";
-import {
-  IconExternalLink,
-  IconLink,
-  IconMail,
-  IconPhone,
-} from "@tabler/icons-react";
+import { IconExternalLink, IconMail, IconPhone } from "@tabler/icons-react";
 import Link from "next/link";
 
 function Contact({ title, type }) {
@@ -25,65 +19,11 @@ function Contact({ title, type }) {
   );
 }
 
-export default function Footer() {
-  // const footer = [
-  //   {
-  //     title: "Contact",
-  //     content: [
-  //       {
-  //         link: "tel:00000",
-  //         title: (
-  //           <div className="flex items-center gap-2">
-  //             <IconPhone /> 000000
-  //           </div>
-  //         ),
-  //       },
-  //       {
-  //         link: "mailto:example@mail.com",
-  //         title: (
-  //           <div className="flex items-center gap-2">
-  //             <IconMail />
-  //             example@mail.com
-  //           </div>
-  //         ),
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Useful Links",
-  //     content: [
-  //       { link: "/#about", title: "About" },
-  //       { link: "/#speakers", title: "Speakers" },
-  //       { link: "/#member", title: "Become a member" },
-  //       { link: "/#conference", title: "Conferences" },
-  //     ],
-  //   },
-  //   {
-  //     title: "Useful Links",
-  //     content: [
-  //       { link: "/#about", title: "About" },
-  //       { link: "/#speakers", title: "Speakers" },
-  //       { link: "/#member", title: "Become a member" },
-  //       { link: "/#conference", title: "Conferences" },
-  //     ],
-  //   },
-  //   {
-  //     title: "Useful Links",
-  //     content: [
-  //       { link: "/#about", title: "About" },
-  //       { link: "/#speakers", title: "Speakers" },
-  //       { link: "/#member", title: "Become a member" },
-  //       { link: "/#conference", title: "Conferences" },
-  //     ],
-  //   },
-  // ];
-
-  const { footer } = useHomeStore();
-
+export default function Footer({ links }) {
   return (
     <footer className="footer">
       <div className="footer__container">
-        {footer.map((section, index) => (
+        {links.map((section, index) => (
           <div className="footer__section" key={index}>
             <h3 className="footer__section-title">{section.title}</h3>
             <ul className="footer__section-list">

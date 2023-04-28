@@ -1,16 +1,7 @@
-import { useHomeStore } from "@/store/homeStore";
 import { IconCircleChevronRight } from "@tabler/icons-react";
 import Link from "next/link";
 
 export default function Explore({ exploreLinks }) {
-  // const explore = [
-  //   { name: "Schedule", link: "/schedule" },
-  //   { name: "Speakers", link: "#" },
-  //   { name: "FAQ", link: "/faq" },
-  //   { name: "2019 Conference", link: "#" },
-  // ];
-
-  // const { explore } = useHomeStore();
 
   return (
     <section className="section" id="explore">

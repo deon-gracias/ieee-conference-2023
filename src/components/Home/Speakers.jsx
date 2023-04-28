@@ -1,16 +1,7 @@
 import { getFileURL } from "@/lib/pocketbase";
 import Link from "next/link";
-import { useHomeStore } from "@/store/homeStore";
 
 export default function Speakers({ speakers }) {
-  // const { speakers } = useHomeStore();
-  // const speakers = Array.from({ length: 4 }).map((e, index) => (
-  //   <div className="speakers-card" key={index}>
-  //     <Image alt="Speaker Image" /> <h4>John Doe</h4>
-  //     <h6>John Die</h6>
-  //   </div>
-  // ));
-
   return (
     <section className="section" id="speakers">
       <div className="section__container">
@@ -28,7 +19,6 @@ export default function Speakers({ speakers }) {
               data-aos-delay={`${200 * index}`}
             >
               <div className="speakers-card">
-                {console.log(getFileURL(s.collectionName, s.id, s.image))}
                 <img
                   loading="lazy"
                   className="speakers-card__img"
