@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pb-win": "./pocketbase/win.exe serve",
+    "pb-win": "start pocketbase/win.exe serve",
     "pb-linux": "./pocketbase/linux serve"
   },
   "dependencies": {
