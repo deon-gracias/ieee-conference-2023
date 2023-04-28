@@ -2,7 +2,7 @@ import { useHomeStore } from "@/store/homeStore";
 import { IconCircleChevronRight } from "@tabler/icons-react";
 import Link from "next/link";
 
-export default function Explore() {
+export default function Explore({ exploreLinks }) {
   // const explore = [
   //   { name: "Schedule", link: "/schedule" },
   //   { name: "Speakers", link: "#" },
@@ -10,7 +10,7 @@ export default function Explore() {
   //   { name: "2019 Conference", link: "#" },
   // ];
 
-  const { explore } = useHomeStore();
+  // const { explore } = useHomeStore();
 
   return (
     <section className="section" id="explore">
@@ -20,7 +20,7 @@ export default function Explore() {
         </h1>
 
         <ul className="explore__list">
-          {explore.map((e, index) => (
+          {exploreLinks.map((e, index) => (
             <li
               key={index}
               className="explore__item"

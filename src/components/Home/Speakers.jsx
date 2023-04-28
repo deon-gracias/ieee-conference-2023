@@ -2,8 +2,8 @@ import { getFileURL } from "@/lib/pocketbase";
 import Link from "next/link";
 import { useHomeStore } from "@/store/homeStore";
 
-export default function Speakers() {
-  const { speakers } = useHomeStore();
+export default function Speakers({ speakers }) {
+  // const { speakers } = useHomeStore();
   // const speakers = Array.from({ length: 4 }).map((e, index) => (
   //   <div className="speakers-card" key={index}>
   //     <Image alt="Speaker Image" /> <h4>John Doe</h4>

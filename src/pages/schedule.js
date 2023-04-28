@@ -1,8 +1,8 @@
 import HomeLayout from "@/components/Home/HomeLayout";
-import { useHomeStore } from "@/store/homeStore";
+import axios from "axios";
+import { pbURL } from "@/lib/pocketbase";
 
-export default function Schedule() {
-  const { schedule } = useHomeStore();
+export default function Schedule({ schedule }) {
 
   return (
     <HomeLayout>
@@ -51,4 +51,19 @@ export default function Schedule() {
       </section>
     </HomeLayout>
   );
+}
+
+export async function getStaticProps() {
+  const schedule = (
+    await axios.get(pbURL + "/collections/schedule/records?expand=timeline")
+  ).data.items;
+
+  return {
+    props: {
+      schedule: schedule.map(({ expand, ...rest }) => ({
+        ...rest,
+        timeline: expand.timeline,
+      })),
+    },
+  };
 }

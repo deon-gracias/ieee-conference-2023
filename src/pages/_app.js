@@ -3,12 +3,9 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "@/styles/globals.css";
-import { useHomeStore } from "@/store/homeStore";
+import HomeLayout from "@/components/Home/HomeLayout";
 
-export default function App({ Component, pageProps }) {
-  const { fetchSpeakers, fetchFooter, fetchExplore, fetchSchedule, fetchFaqs } =
-    useHomeStore();
-
+export default function App({ Component, pageProps, footerLinks }) {
   useEffect(() => {
     AOS.init({
       offset: 100,
@@ -17,20 +14,31 @@ export default function App({ Component, pageProps }) {
       easing: "ease-in-out-sine",
       once: true,
     });
-
-    fetchSpeakers();
-    fetchFooter();
-    fetchExplore();
-    fetchSchedule();
-    fetchFaqs();
   }, []);
 
   return (
-    <>
+    <HomeLayout headerLinks={null} footerLinks={footerLinks}>
       <Head>
         <title>IEEE Conference 2023</title>
       </Head>
       <Component {...pageProps} />
-    </>
+    </HomeLayout>
   );
+}
+
+export async function getStaticProps() {
+  const footerLinks = (
+    await axios.get(pbURL + "/collections/footer/records?expand=content")
+  ).data.items;
+
+  const headerLinks = (
+    await axios.get(pbURL + "/collections/header/records?expand=items")
+  ).data.items;
+
+  return {
+    props: {
+      footerLinks,
+      headerLinks,
+    },
+  };
 }

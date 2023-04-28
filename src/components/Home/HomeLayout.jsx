@@ -1,14 +1,19 @@
 import Footer from "./Footer";
 import Header from "./Header";
 
-export default function HomeLayout({ children }) {
+export default function HomeLayout({
+  headerLinks,
+  footerLinks,
+  contactLinks,
+  children,
+}) {
   return (
     <>
-      <Header />
+      <Header links={headerLinks} />
 
       <main>{children}</main>
 
-      <Footer />
+      <Footer links={footerLinks} contacts={contactLinks} />
     </>
   );
 }
