@@ -8,8 +8,6 @@ import HomeLayout from "@/components/Home/HomeLayout";
 export default function App({
   Component,
   pageProps,
-  footerLinks,
-  contactLinks,
 }) {
   useEffect(() => {
     AOS.init({

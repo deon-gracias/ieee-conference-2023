@@ -4,7 +4,7 @@ import { IconMenu2, IconX } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({ links }) {
   const navItems = [
     { title: "About", href: "/#about" },
     { title: "Speakers", href: "/#speakers" },
@@ -13,6 +13,9 @@ export default function Header() {
   ];
 
   const [visible, setVisible] = useState(false);
+
+
+  console.log(links);
 
   return (
     <header className="header">
