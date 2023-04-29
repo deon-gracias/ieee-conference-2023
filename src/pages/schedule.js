@@ -1,11 +1,20 @@
 import HomeLayout from "@/components/Home/HomeLayout";
 import axios from "axios";
 import { pbURL } from "@/lib/pocketbase";
+import { getHomeLayoutProps } from "@/helpers/prop-helpers";
 
-export default function Schedule({ schedule }) {
+export default function Schedule({ 
+  schedule,
+  headerLinks,
+  footerLinks,
+  contactLinks, }) {
 
   return (
-    <HomeLayout>
+    <HomeLayout
+      headerLinks={headerLinks}
+      footerLinks={footerLinks}
+      contactLinks={contactLinks}
+    >
       <section id="schedule">
         <div className="section__container">
           <h1 className="section__title">Schedule</h1>
@@ -57,6 +66,7 @@ export async function getStaticProps() {
   const schedule = (
     await axios.get(pbURL + "/collections/schedule/records?expand=timeline")
   ).data.items;
+  const layoutProps = await getHomeLayoutProps();
 
   return {
     props: {
@@ -64,6 +74,7 @@ export async function getStaticProps() {
         ...rest,
         timeline: expand.timeline,
       })),
+      ...layoutProps,
     },
   };
 }
