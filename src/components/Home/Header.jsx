@@ -5,17 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Header({ links }) {
-  const navItems = [
-    { title: "About", href: "/#about" },
-    { title: "Speakers", href: "/#speakers" },
-    { title: "Schedule", href: "/schedule#schedule" },
-    { title: "Explore", href: "/#explore" },
-  ];
 
   const [visible, setVisible] = useState(false);
-
-
-  console.log(links);
 
   return (
     <header className="header">
@@ -48,17 +39,18 @@ export default function Header({ links }) {
                   <IconX height={40} width={40} />
                 </button>
               </li>
-              {navItems.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    onClick={() => setVisible(false)}
-                    href={item.href}
-                    scroll={false}
-                    className="nav__link"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
+              {links.map((section, index) => (
+                <>
+                {
+                  section.expand.items.map((item) => (
+                    <li key={item.id}>
+                      <Link className="nav__link" href={item.link}>
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))
+                }
+                </>
               ))}
             </ul>
           </div>
