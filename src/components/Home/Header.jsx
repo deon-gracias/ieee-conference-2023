@@ -41,7 +41,7 @@ export default function Header({ links }) {
               </li>
               {links.map((section, index) => (
                 <>
-                {
+                  {/* {
                   section.expand.items.map((item) => (
                     <li key={item.id}>
                       <Link className="nav__link" href={item.link}>
@@ -49,7 +49,37 @@ export default function Header({ links }) {
                       </Link>
                     </li>
                   ))
-                }
+                } */}
+
+                  {
+                    section.expand.items.map((item) => (
+                      <li key={item.id}>
+                        {item.dropdowns === null ? (
+                          <Link className="nav__link" href={item.link}>
+                            {item.title}
+                          </Link>
+                        ) : (
+                          <>
+                            <div className="dropdown dropdown-hover">
+                              <label tabIndex={0} className="nav__link">{item.title}</label>
+                              <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-white w-28">
+                                {item.dropdowns.split(',').map((pair) => {
+                                  const [key, value] = pair.split(':');
+                                  return (
+                                    <li>
+                                      <Link key={key} className="nav__link" href={value}>
+                                        {key}
+                                      </Link>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                          </>
+                        )}
+                      </li>
+                    ))
+                  }
                 </>
               ))}
             </ul>
