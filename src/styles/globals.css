@@ -30,7 +30,7 @@
   }
 
   .btn-register {
-    @apply gap-2 border-2 shadow-md bg-white/40 border-primary btn text-primary w-fit backdrop-blur-2xl;
+    @apply gap-2 border-2 shadow-md bg-white/40 border-primary btn text-primary w-fit lg:backdrop-blur-2xl;
     @apply duration-200 hover:bg-white/80 hover:shadow-xl;
     @apply md:text-xl;
   }

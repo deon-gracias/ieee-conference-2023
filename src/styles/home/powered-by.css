@@ -9,7 +9,7 @@
   }
 
   .powered-by__logo {
-    @apply w-[150px];
-    @apply md:w-[200px];
+    @apply w-[125px];
+    @apply md:w-[170px];
   }
 }
