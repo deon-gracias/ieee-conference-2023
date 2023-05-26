@@ -62,7 +62,7 @@ export default function Header({ links }) {
                           <>
                             <div className="dropdown dropdown-hover">
                               <label tabIndex={0} className="nav__link">{item.title}</label>
-                              <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-white w-28">
+                              <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-white w-fit">
                                 {item.dropdowns.split(',').map((pair) => {
                                   const [key, value] = pair.split(':');
                                   return (

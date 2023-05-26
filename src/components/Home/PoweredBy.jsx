@@ -1,5 +1,5 @@
 import Image from "next/image";
-import IEEELogo from "@/assets/images/ieee-white.png";
+import IEEELogo from "@/assets/images/IEEE-Logo.svg";
 
 export default function PoweredBy() {
   return (
