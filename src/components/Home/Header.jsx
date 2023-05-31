@@ -66,7 +66,7 @@ export default function Header({ links }) {
                                 {item.dropdowns.split(',').map((pair) => {
                                   const [key, value] = pair.split(':');
                                   return (
-                                    <li>
+                                    <li key={item.id}>
                                       <Link key={key} className="nav__link" href={value}>
                                         {key}
                                       </Link>
