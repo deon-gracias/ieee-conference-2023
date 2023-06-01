@@ -45,56 +45,43 @@
   .dropdown {
     @apply relative inline-block;
   }
-
-  .dropdown .dropdown-content {
-    @apply invisible absolute z-50 opacity-0;
-  }
-
-  .dropdown-hover:hover .dropdown-content {
-    @apply visible opacity-100 right-0;
-  }
-
-  .dropdown-left .dropdown-content {
-    @apply top-0 right-full bottom-auto;
-  }
-
-  .menu {
-    @apply flex flex-col flex-wrap;
-    &.horizontal {
-      @apply inline-flex flex-row;
-      :where(li) {
-        @apply flex-row;
-      }
-    }
-  }
-  :where(.menu li) {
-    @apply relative flex flex-col flex-wrap items-stretch shrink-0;
-  }
-  .menu :where(li:not(.menu-title)) > :where(*:not(ul)) {
-    @apply flex;
-  }
-  .menu :where(li:not(.disabled):not(.menu-title)) > :where(*:not(ul)) {
-    @apply cursor-pointer select-none items-center outline-none;
-  }
-  .menu > :where(li > *:not(ul):focus) {
+  .dropdown > *:focus {
     @apply outline-none;
   }
-  .menu > :where(li.disabled > *:not(ul):focus) {
-    @apply cursor-auto;
+  .dropdown .dropdown-content {
+    @apply absolute;
   }
-
-  .menu > :where(li) :where(ul) {
-    @apply flex flex-col items-stretch;
+  .dropdown:is(:not(details)) .dropdown-content {
+    @apply invisible opacity-0;
   }
-  .menu > :where(li) > :where(ul) {
-    @apply absolute hidden;
-    top: initial;
-    left: 100%;
+  .dropdown-end .dropdown-content {
+    @apply right-0;
   }
-  .menu > :where(li:hover) > :where(ul) {
-    @apply flex;
+  .dropdown-left .dropdown-content {
+    @apply top-0 right-1/4 bottom-auto;
   }
-  .menu > :where(li:focus) > :where(ul) {
-    @apply flex;
+  .dropdown-right .dropdown-content {
+    @apply left-full top-0 bottom-auto;
+  }
+  .dropdown-bottom .dropdown-content {
+    @apply bottom-auto top-full;
+  }
+  .dropdown-top .dropdown-content {
+    @apply bottom-full top-auto;
+  }
+  .dropdown-end.dropdown-right .dropdown-content {
+    @apply bottom-0 top-auto;
+  }
+  .dropdown-end.dropdown-left .dropdown-content {
+    @apply bottom-0 top-auto;
+  }
+  .dropdown.dropdown-open .dropdown-content,
+  .dropdown.dropdown-hover:hover .dropdown-content,
+  .dropdown:not(.dropdown-hover):focus .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    @apply visible opacity-100;
+  }
+  .dropdown:is(details) summary::-webkit-details-marker {
+    @apply hidden;
   }
 }

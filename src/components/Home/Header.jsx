@@ -41,16 +41,6 @@ export default function Header({ links }) {
               </li>
               {links.map((section, index) => (
                 <>
-                  {/* {
-                  section.expand.items.map((item) => (
-                    <li key={item.id}>
-                      <Link className="nav__link" href={item.link}>
-                        {item.title}
-                      </Link>
-                    </li>
-                  ))
-                } */}
-
                   {
                     section.expand.items.map((item) => (
                       <li key={item.id}>
@@ -60,17 +50,15 @@ export default function Header({ links }) {
                           </Link>
                         ) : (
                           <>
-                            <div className="dropdown dropdown-hover">
-                              <label tabIndex={0} className="nav__link">{item.title}</label>
-                              <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-white w-fit">
+                            <div className="dropdown dropdown-bottom md:dropdown-bottom md:dropdown-left">
+                              <label tabIndex={0} className="nav__link hover:cursor-pointer">{item.title}</label>
+                              <ul tabIndex={0} className="dropdown-content p-2 shadow w-fit md:w-max bg-white">
                                 {item.dropdowns.split(',').map((pair) => {
                                   const [key, value] = pair.split(':');
                                   return (
-                                    <li key={item.id}>
                                       <Link key={key} className="nav__link" href={value}>
                                         {key}
                                       </Link>
-                                    </li>
                                   );
                                 })}
                               </ul>
