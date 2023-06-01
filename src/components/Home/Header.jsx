@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CollegeLogo from "@/assets/images/college-logo.svg";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -51,14 +52,18 @@ export default function Header({ links }) {
                         ) : (
                           <>
                             <div className="dropdown dropdown-bottom md:dropdown-bottom md:dropdown-left">
-                              <label tabIndex={0} className="nav__link hover:cursor-pointer">{item.title}</label>
-                              <ul tabIndex={0} className="dropdown-content p-2 shadow w-fit md:w-max bg-white">
+                              <div className="flex flex-row">
+                                <label tabIndex={0} className="nav__link__dropdown hover:cursor-pointer">{item.title}
+                                  <ChevronDownIcon className="mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+                                </label>
+                              </div>
+                              <ul tabIndex={1} className="dropdown-content p-2 shadow w-fit md:w-max bg-white transition duration-300 ease-in-out">
                                 {item.dropdowns.split(',').map((pair) => {
                                   const [key, value] = pair.split(':');
                                   return (
-                                      <Link key={key} className="nav__link" href={value}>
-                                        {key}
-                                      </Link>
+                                    <Link key={key} className="nav__link" href={value}>
+                                      {key}
+                                    </Link>
                                   );
                                 })}
                               </ul>

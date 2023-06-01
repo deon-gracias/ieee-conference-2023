@@ -42,46 +42,62 @@
     @apply block pl-3 pr-4 duration-200 rounded-lg btn md:bg-transparent hover:bg-primary hover:text-white md:font-normal;
   }
 
+  .nav__link__dropdown {
+    @apply pl-3 pr-4 duration-200 rounded-lg btn md:bg-transparent hover:bg-primary hover:text-white md:font-normal;
+  }
+
   .dropdown {
     @apply relative inline-block;
   }
+  
   .dropdown > *:focus {
     @apply outline-none;
   }
+  
   .dropdown .dropdown-content {
-    @apply absolute;
+    @apply absolute z-10; /* Add z-10 class for higher z-index */
   }
+  
   .dropdown:is(:not(details)) .dropdown-content {
     @apply invisible opacity-0;
   }
+  
   .dropdown-end .dropdown-content {
     @apply right-0;
   }
+  
   .dropdown-left .dropdown-content {
     @apply top-0 right-1/4 bottom-auto;
   }
+  
   .dropdown-right .dropdown-content {
     @apply left-full top-0 bottom-auto;
   }
+  
   .dropdown-bottom .dropdown-content {
     @apply bottom-auto top-full;
   }
+  
   .dropdown-top .dropdown-content {
     @apply bottom-full top-auto;
   }
+  
   .dropdown-end.dropdown-right .dropdown-content {
     @apply bottom-0 top-auto;
   }
+  
   .dropdown-end.dropdown-left .dropdown-content {
     @apply bottom-0 top-auto;
   }
+  
   .dropdown.dropdown-open .dropdown-content,
   .dropdown.dropdown-hover:hover .dropdown-content,
   .dropdown:not(.dropdown-hover):focus .dropdown-content,
   .dropdown:focus-within .dropdown-content {
     @apply visible opacity-100;
   }
+  
   .dropdown:is(details) summary::-webkit-details-marker {
     @apply hidden;
   }
-}
+}  
