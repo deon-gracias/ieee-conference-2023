@@ -51,17 +51,17 @@ export default function Header({ links }) {
                           </Link>
                         ) : (
                           <>
-                            <div className="dropdown dropdown-bottom md:dropdown-bottom md:dropdown-left">
+                            <div className="dropdown dropdown-bottom">
                               <div className="flex flex-row">
-                                <label tabIndex={0} className="nav__link__dropdown hover:cursor-pointer">{item.title}
+                                <label tabIndex={0} className="nav__link-dropdown hover:cursor-pointer">{item.title}
                                   <ChevronDownIcon className="mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
                                 </label>
                               </div>
-                              <ul tabIndex={1} className="dropdown-content p-2 shadow w-fit md:w-max bg-white transition duration-300 ease-in-out">
+                              <ul tabIndex={1} className="dropdown-content p-2 w-fit md:w-max bg-white transition duration-300 ease-in-out">
                                 {item.dropdowns.split(',').map((pair) => {
                                   const [key, value] = pair.split(':');
                                   return (
-                                    <Link key={key} className="nav__link" href={value}>
+                                    <Link key={key} className="nav__link text-lg" href={value}>
                                       {key}
                                     </Link>
                                   );
