@@ -1,12 +1,12 @@
-import Hero from "@/components/Home/Hero";
-import About from "@/components/Home/About";
-import PoweredBy from "@/components/Home/PoweredBy";
-import Explore from "@/components/Home/Explore";
-import Speakers from "@/components/Home/Speakers";
+import Hero from "@/components/home/Hero";
+import About from "@/components/home/About";
+import PoweredBy from "@/components/home/PoweredBy";
+import Explore from "@/components/home/Explore";
+import Speakers from "@/components/home/Speakers";
 import { getHomeLayoutProps } from "@/helpers/prop-helpers";
 import { pbURL } from "@/lib/pocketbase";
 import axios from "axios";
-import HomeLayout from "@/components/Home/HomeLayout";
+import HomeLayout from "@/components/home/HomeLayout";
 
 export default function Home({
   speakers,

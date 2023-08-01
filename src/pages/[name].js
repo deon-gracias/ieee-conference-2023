@@ -1,4 +1,4 @@
-import HomeLayout from "@/components/Home/HomeLayout";
+import HomeLayout from "@/components/home/HomeLayout";
 import { getHomeLayoutProps } from "@/helpers/prop-helpers";
 import { pbURL } from "@/lib/pocketbase";
 import axios from "axios";
